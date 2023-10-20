@@ -6,10 +6,6 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,12 +14,17 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 /**
  * @author Emil Sjölander
  */
-public class TestActivity extends ActionBarActivity implements
+public class TestActivity extends AppCompatActivity implements
         AdapterView.OnItemClickListener, StickyListHeadersListView.OnHeaderClickListener,
         StickyListHeadersListView.OnStickyHeaderOffsetChangedListener,
         StickyListHeadersListView.OnStickyHeaderChangedListener {
@@ -71,8 +72,8 @@ public class TestActivity extends ActionBarActivity implements
         stickyList.setOnHeaderClickListener(this);
         stickyList.setOnStickyHeaderChangedListener(this);
         stickyList.setOnStickyHeaderOffsetChangedListener(this);
-        stickyList.addHeaderView(getLayoutInflater().inflate(R.layout.list_header, null));
-        stickyList.addFooterView(getLayoutInflater().inflate(R.layout.list_footer, null));
+//        stickyList.addHeaderView(getLayoutInflater().inflate(R.layout.list_header, null));
+//        stickyList.addFooterView(getLayoutInflater().inflate(R.layout.list_footer, null));
         stickyList.setEmptyView(findViewById(R.id.empty));
         stickyList.setDrawingListUnderStickyHeader(true);
         stickyList.setAreHeadersSticky(true);
@@ -82,7 +83,7 @@ public class TestActivity extends ActionBarActivity implements
         mDrawerToggle = new ActionBarDrawerToggle(
                 this,                  /* host Activity */
                 mDrawerLayout,         /* DrawerLayout object */
-                R.drawable.ic_drawer,  /* nav drawer icon to replace 'Up' caret */
+//                R.drawable.ic_drawer,  /* nav drawer icon to replace 'Up' caret */
                 R.string.drawer_open,  /* "open drawer" description */
                 R.string.drawer_close  /* "close drawer" description */
         );

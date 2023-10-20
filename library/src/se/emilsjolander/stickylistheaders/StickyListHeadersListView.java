@@ -416,6 +416,7 @@ public class StickyListHeadersListView extends FrameLayout {
 
             // ensure wrapper view child has a header
             WrapperView wrapperViewChild = (WrapperView) child;
+//            Log.d("dddd", "updateHeaderVisibilities: wrapperViewChild" + wrapperViewChild.hasHeader());
             if (!wrapperViewChild.hasHeader()) {
                 continue;
             }

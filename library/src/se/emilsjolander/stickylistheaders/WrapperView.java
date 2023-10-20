@@ -65,6 +65,9 @@ public class WrapperView extends ViewGroup {
 			}
 			this.mHeader = header;
 			if (header != null) {
+//				item.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
+//				item.setFocusable(true);
+//				item.setAccessibilityTraversalBefore(header.getId());
 				addView(header);
 			}
 		}

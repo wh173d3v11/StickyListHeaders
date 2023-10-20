@@ -1,11 +1,11 @@
 package se.emilsjolander.stickylistheaders.sample;
-import com.nineoldandroids.animation.ValueAnimator;
+
+import android.animation.Animator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.nineoldandroids.animation.Animator;
 
 import java.util.WeakHashMap;
 
